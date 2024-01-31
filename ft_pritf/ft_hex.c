@@ -63,8 +63,11 @@ int	ft_hex(unsigned int n, int l)
 		return (l + write (1, "0", 1));
 	hex = malloc(sizeof (char) * l);
 	if (!hex)
-		return ((int) NULL);
-	hex = myywhile(j, hex, n);
+    {
+        write(1, "Memory allocation error!\n", 26);
+		return (0);
+    }
+    hex = myywhile(j, hex, n);
 	while (h--)
 		write(1, &hex[h], 1);
 	free(hex);

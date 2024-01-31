@@ -63,8 +63,11 @@ int	ft_uphex(unsigned int n, int l)
 		return (l + write(1, "0", 1));
 	hex = malloc(sizeof (char) * l);
 	if (!hex)
-		return ((int) NULL);
-	hex = myyywhile(j, hex, n);
+    {
+        write(1, "Memory allocation error!\n", 26);
+		return (0);
+    }
+    hex = myyywhile(j, hex, n);
 	while (h--)
 		write(1, &hex[h], 1);
 	free(hex);
