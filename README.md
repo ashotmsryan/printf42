@@ -30,4 +30,6 @@ int main(void)
 }</pre>
 
 compile the newfile by gcc or cc with any flags and precompiled libftprintf.a file, like
-<pre>gcc -Wall -Werror -Wextra newfile.c libftprintf.a ; ./a.out</pre>
+```
+gcc -Wall -Werror -Wextra newfile.c libftprintf.a ; ./a.out
+```
